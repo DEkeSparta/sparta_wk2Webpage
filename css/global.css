@@ -1,7 +1,7 @@
 body{
   font-family:Segoe UI, Arial;
   margin: 0px;
-  background-color: #f3f3f3;
+  background-color: #f0f0f0;
   min-width: 600px;
 }
 
@@ -38,15 +38,81 @@ nav ul li a:hover{
 }
 
 div{
-  border:1px dashed black;
+  /* border:1px dashed black; */
 }
 
 .mainContainer{
   margin:100px;
-  height:500px;
   padding:50px;
   background-color: #f6f6f6;
   border-radius: 25px;
+}
+
+.logoDiv{
+  width:100%;
+  height:0px;
+  padding:0px;
+  margin:0px;
+  text-align: center;
+  position: relative;
+  top:-80px;
+}
+
+.borderLogo{
+  border:4px solid #8888bb;
+  border-radius: 50%;
+  width:50px;
+  height:50px;
+  display:inline;
+}
+
+h1,h2,h3{
+  text-align: center;
+  font-weight: normal;
+}
+h1{
+  color:white;
+  text-shadow:
+    0px 0px 4px #444477,
+    0px 0px 4px #444477,
+    0px 0px 4px #444477,
+    0px 0px 4px #444477,
+    0px 0px 4px #444477;
+}
+h3{
+  font-style: italic;
+}
+
+.openPara{
+  margin:50px 8%;
+}
+
+.photobox{
+  max-width:100%;
+  padding:10%;
+  box-shadow: 0px 0px 30px #8888bb inset, 0px 0px 30px #8888bb;
+  border-radius:25px;
+  background-color:rgba(136,136,187,0.3);
+  vertical-align: middle;
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+.photopiece{
+  margin:10px;
+  width: 29%;
+  border-radius:50%;
+  border:2px black solid;
+  transition-duration: 0.3s;
+}
+.photopiece:hover{
+  border-radius:20%;
+  transform: scale(1.2);
 }
 
 footer{
@@ -57,4 +123,36 @@ footer{
     vertical-align: middle;
     color: #777777;
     font-size: small;
+}
+
+.flexText{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+.flexText div{
+  min-width:500px;
+}
+.flexText div img{
+  width:100%;
+}
+
+@media screen and (max-width:1000px){
+  .mainContainer{
+    margin:70px;
+    padding:35px;
+    border-radius: 18px;
+  }
+  .logoDiv{
+    top:-65px;
+  }
+}
+
+@media screen and (max-device-width:600px){
+  body{
+    font-size: 0.8rem;
+  }
 }
